@@ -59,3 +59,70 @@ FILES = [
 
 # wrong
 FILES = ['setup.cfg', 'tox.ini',]
+
+# 行の折り返し
+# correct
+foo = long_function_name(var_one, var_two,
+                         var_three, var_four)
+
+foo = long_function_name(
+    var_one, var_two,
+    var_three, var_four)
+
+# wrong
+foo = long_function_name(var_one, var_two,
+    var_three, var_four)
+
+
+# correct
+def long_function_name(
+        var_one, var_two, var_three, var_four):
+    print(var_one)
+
+def long_function_name(
+        var_one, var_two, var_three,
+        var_four):
+    print(var_one)
+
+# wrong
+def long_function_name(
+    var_one, var_two, var_three, var_four):
+    print(var_one)
+
+def long_function_name(
+    var_one, var_two, var_three,
+    var_four):
+    print(var_one)
+
+# '\'で区切って改行する
+print("このように表示する文章が長かったりする場合は\
+バックスラッシュで区切ると改行できます。")
+
+#correct
+a = 1000000000000000000000000000 \
+    + 1000000000000000000 \
+    + 10000000000000000000000000\
+    + 100000000 \
+    + 100000
+
+# wrong
+a = 1000000000000000000000000000 +\
+    10000000000000000000 +\
+    100000000 +\
+    10000000000000
+
+# 関数間は二行空ける
+def func():
+    pass
+
+
+def func2():
+    pass
+
+# 同じクラス内では一行
+class MyClass:
+    def __init__(self):
+        pass
+
+    def method(self):
+        pass
