@@ -126,3 +126,27 @@ class MyClass:
 
     def method(self):
         pass
+
+#importのStyle
+#correct
+import os
+import sys
+
+from subprocess import Popen, PIPE
+
+# wrong
+import os, sys
+
+# 順番
+# 1. Standard library (time, sys)
+# 2. Third party (numpy, pandas)
+# 3. Our library
+# 4. Local library
+# それぞれ一行空ける (abc順)
+
+# absolute import
+import mypkg.sibling
+from mypkg import sibling
+from mypkg sibling import example
+
+from package.subpackage1.subpackage2.subpackage3.module4 import function
