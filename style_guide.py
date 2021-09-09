@@ -150,3 +150,12 @@ from mypkg import sibling
 from mypkg sibling import example
 
 from package.subpackage1.subpackage2.subpackage3.module4 import function
+
+# コメント
+# ・コメントは常に最新にする。コメントとコードの中身が異なるなら、コメントは無い方がまし
+# ・なるべく英語で書く。絶対に日本語がわからない人が読まないなら日本語でもOK
+# ・書くときは文章で書くのが望ましい
+# ・# のあとに半角スペースを入れる
+# ・インラインコメントはコードの後に半角スペースを2つ入れて#を書く
+# ・Docstringは基本的に全てのmodule, function, class, methodにつける(non publicな外からアクセスしない関数には不要)
+# ・そのコードが「なにをしているか」より「なぜそう書いたのか」の方が有益
