@@ -175,7 +175,7 @@ from package.subpackage1.subpackage2.subpackage3.module4 import function
 for _ in range(10):
     print("hello")
 
-l, I, 1, 0, o 一文字の変数は1や0に見間違えるので使わない
+# l, I, 1, 0, o 一文字の変数は1や0に見間違えるので使わない
 # correct
 length = len(letter)
 # wrong
@@ -184,3 +184,31 @@ l = len(letter)
 # Constants(宣言後変更しない変数)は大文字のsnakecaseを使う
 PI = 3.14
 # PI = 3
+
+# Return
+def foo(x):
+    if x >= 0:
+        return math.sqrt(x)
+    else:
+        return None
+
+# オブジェクトタイプの確認はisinstance()を使う
+# correct
+if isinstance(obj, int)
+# wrong
+if type(obj) is type(1)
+
+# Booleanに比較演算子を使わない
+bool_var = True
+# correct
+if bool_var:
+# wrong
+if bool_var == True:
+
+# type hint
+def greeting(name: str) -> str:
+    return "Hello " + name
+# 一つでもhintをつけたら全てにつける
+# Pythonがtypeのチェックをしてくれるわけでは無い
+# Pythonは動的型付け言語であることを意識
+# type hintを強制したり、命名規約に入れるべきではありません
